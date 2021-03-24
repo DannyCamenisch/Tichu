@@ -1,26 +1,29 @@
-package ch.dcamenisch.tichu;
+package ch.dcamenisch.tichu.Card;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-import ch.dcamenisch.tichu.Card.Color;
-import ch.dcamenisch.tichu.Card.Value;
+import ch.dcamenisch.tichu.Player;
 
 public class Deck {
     private ArrayList<Card> deck;
 
     public Deck() {
+        makeCards();
+    }
+
+    private void makeCards() {
         deck = new ArrayList<Card>();
 
-        for(Value v : Value.values()) {
-            if (v == Value.DRAGON || v == Value.PHOENIX || v == Value.DOG || v == Value.MAHJONG) {
-                deck.add(new Card(Color.SPECIAL, v));
+        for(CardRank r : CardRank.values()) {
+            if (r == CardRank.DRAGON || r == CardRank.PHOENIX || r == CardRank.DOG || r == CardRank.MAHJONG) {
+                deck.add(new Card(CardSuit.SPECIAL, r));
                 continue;
             }
 
-            for(Color c : Color.values()) {
-                if(c == Color.SPECIAL) continue;
-                deck.add(new Card(c, v));
+            for(CardSuit s : CardSuit.values()) {
+                if(s == CardSuit.SPECIAL) continue;
+                deck.add(new Card(s, r));
             }
         }
     }
