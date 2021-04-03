@@ -6,6 +6,11 @@ public class CardSet implements Comparable<CardSet> {
     public CardSetType type;
     public List<Card> cards;
     
+    public CardSet(CardSetType type, List<Card> cards) {
+        this.cards = cards;
+        this.type = type;
+    }
+
     public CardSet(List<Card> cards) {
         makeCardSet(cards);
     }

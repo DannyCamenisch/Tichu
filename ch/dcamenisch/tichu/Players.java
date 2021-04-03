@@ -1,7 +1,7 @@
 package ch.dcamenisch.tichu;
 
-import ch.dcamenisch.tichu.Card.Color;
-import ch.dcamenisch.tichu.Card.Value;
+import ch.dcamenisch.tichu.Card.CardRank;
+import ch.dcamenisch.tichu.Card.CardSuit;
 
 public class Players {
     private Player[] players;
@@ -17,7 +17,7 @@ public class Players {
 
     public void determineStartingPlayer() {
         for(int i = 0; i < players.length; i++){
-            if(players[i].hasCard(Value.MAHJONG, Color.SPECIAL)) {
+            if(players[i].hasCard(CardRank.MAHJONG, CardSuit.SPECIAL)) {
                 currentPlayer = i;
             }
         }

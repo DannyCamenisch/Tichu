@@ -2,6 +2,9 @@ package ch.dcamenisch.tichu;
 
 import java.util.ArrayList;
 
+import ch.dcamenisch.tichu.Card.Card;
+import ch.dcamenisch.tichu.Card.Deck;
+
 public class Game {
     private static final int MAX_SCORE = 1000;
 

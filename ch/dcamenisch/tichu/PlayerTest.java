@@ -3,8 +3,9 @@ package ch.dcamenisch.tichu;
 import java.util.ArrayList;
 import java.util.List;
 
-import ch.dcamenisch.tichu.Card.Color;
-import ch.dcamenisch.tichu.Card.Value;
+import ch.dcamenisch.tichu.Card.Card;
+import ch.dcamenisch.tichu.Card.CardRank;
+import ch.dcamenisch.tichu.Card.CardSuit;
 
 public class PlayerTest implements Player {
     private String name;
@@ -44,7 +45,7 @@ public class PlayerTest implements Player {
         System.out.println("Player " + name);
         System.out.println("---------------");
         for(Card c : cards) {
-            c.printCard();
+            System.out.println(c);
         }
         System.out.println("---------------");
     }
@@ -67,7 +68,7 @@ public class PlayerTest implements Player {
 
     public void endRound() {
         for(Card c : stack) {
-            score += c.cardValue();
+            score += c.getPoints();
         }
     }
 
@@ -90,9 +91,9 @@ public class PlayerTest implements Player {
     }
 
     @Override
-    public boolean hasCard(Value value, Color color) {
+    public boolean hasCard(CardRank rank, CardSuit suit) {
         for(Card c : cards) {
-            if(c.color == color && c.value == value) return true;
+            if(c.rank == rank && c.suit == suit) return true;
         }
         
         return false;
