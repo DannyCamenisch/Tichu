@@ -3,7 +3,7 @@ package ch.dcamenisch.tichu.Card;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import ch.dcamenisch.tichu.Player;
+import ch.dcamenisch.tichu.Player.Player;
 
 public class Deck {
     private ArrayList<Card> deck;

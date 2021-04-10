@@ -1,4 +1,4 @@
-package ch.dcamenisch.tichu;
+package ch.dcamenisch.tichu.Player;
 
 import ch.dcamenisch.tichu.Card.CardRank;
 import ch.dcamenisch.tichu.Card.CardSuit;

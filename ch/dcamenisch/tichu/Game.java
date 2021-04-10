@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import ch.dcamenisch.tichu.Card.Card;
 import ch.dcamenisch.tichu.Card.Deck;
+import ch.dcamenisch.tichu.Player.Player;
+import ch.dcamenisch.tichu.Player.Players;
 
 public class Game {
     private static final int MAX_SCORE = 1000;

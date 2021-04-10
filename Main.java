@@ -4,8 +4,8 @@ import java.util.List;
 import ch.dcamenisch.tichu.Game;
 import ch.dcamenisch.tichu.Card.Card;
 import ch.dcamenisch.tichu.Card.CardRank;
-import ch.dcamenisch.tichu.Card.CardSet;
-import ch.dcamenisch.tichu.Card.CardSetGenerator;
+import ch.dcamenisch.tichu.Trick.CardSet;
+import ch.dcamenisch.tichu.Trick.CardSetGenerator;
 import ch.dcamenisch.tichu.Card.CardSuit;
 
 public class Main {

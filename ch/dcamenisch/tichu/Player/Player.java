@@ -1,4 +1,4 @@
-package ch.dcamenisch.tichu;
+package ch.dcamenisch.tichu.Player;
 
 import java.util.ArrayList;
 import java.util.List;
