@@ -1,4 +1,4 @@
-package ch.dcamenisch.tichu.Card;
+package ch.dcamenisch.tichu.Trick;
 
 public enum CardSetType {
     SINGLE_CARD(0),

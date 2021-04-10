@@ -1,4 +1,4 @@
-package ch.dcamenisch.tichu.Card;
+package ch.dcamenisch.tichu.Trick;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,6 +6,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+
+import ch.dcamenisch.tichu.Card.Card;
+import ch.dcamenisch.tichu.Card.CardRank;
+import ch.dcamenisch.tichu.Card.CardSuit;
+
 import java.util.Set;
 
 //TODO: own implementation of CardSetGenerator

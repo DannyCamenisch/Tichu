@@ -1,6 +1,8 @@
-package ch.dcamenisch.tichu.Card;
+package ch.dcamenisch.tichu.Trick;
 
 import java.util.List;
+
+import ch.dcamenisch.tichu.Card.Card;
 
 public class CardSet implements Comparable<CardSet> {
     public CardSetType type;
