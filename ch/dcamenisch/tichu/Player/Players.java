@@ -3,6 +3,8 @@ package ch.dcamenisch.tichu.Player;
 import ch.dcamenisch.tichu.Card.CardRank;
 import ch.dcamenisch.tichu.Card.CardSuit;
 
+//TODO: refactor to PlayerManager?
+
 public class Players {
     private Player[] players;
     private int currentPlayer;
@@ -30,8 +32,4 @@ public class Players {
     public Player[] getPlayers() {
         return players;
     }
-
-
-
-
 }
