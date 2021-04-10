@@ -1,26 +1,25 @@
 package ch.dcamenisch.tichu;
 
-import java.util.ArrayList;
-
-import ch.dcamenisch.tichu.Card.Card;
 import ch.dcamenisch.tichu.Card.Deck;
 import ch.dcamenisch.tichu.Player.Player;
-import ch.dcamenisch.tichu.Player.Players;
+import ch.dcamenisch.tichu.Player.PlayerManager;
+import ch.dcamenisch.tichu.Trick.Trick;
 
 public class Game {
+    /* Constants */
     private static final int MAX_SCORE = 1000;
 
-    private Players players;
-    private Deck deck;
-    private ArrayList<Card> sharedStack;
-    private ArrayList<Card> topCards;
 
+    private PlayerManager players;
+    private Deck deck;
+    private Trick trick;
+    
     /**
      * Instantiate a new Game Object with a new deck of 56 cards and 4 players
      */
     public Game() {
         deck = new Deck();
-        players = new Players(4);
+        players = new PlayerManager(4);
     }
 
     /**
@@ -48,8 +47,6 @@ public class Game {
         deck.dealCards(players.getPlayers());
         players.determineStartingPlayer();
 
-        sharedStack = new ArrayList<Card>();
-        topCards = new ArrayList<Card>();
 
         players.getCurrentPlayer().printCards();
     }

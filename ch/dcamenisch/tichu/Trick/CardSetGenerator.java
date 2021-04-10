@@ -121,13 +121,13 @@ public class CardSetGenerator {
 
 				for (CardSet cs1 : pairCardSetList) {
 					int straightCnt = 0;
-					int c1Rank = cs1.cards.get(0).rank.power;
+					int c1Rank = cs1.cards.get(0).rank.getPower();
 
 					List<Card> tempCardList = new ArrayList<>();
 					tempCardList.addAll(cs1.cards);
 
 					for (CardSet cs2 : pairCardSetList) {
-						int c2Rank = cs2.cards.get(0).rank.power;
+						int c2Rank = cs2.cards.get(0).rank.getPower();
 
 						if (c1Rank != c2Rank) {
 
@@ -219,12 +219,12 @@ public class CardSetGenerator {
 
 		for (Card c1 : chkCardList) {
 			int straightCnt = 0; 
-			int c1Rank = c1.rank.power;
+			int c1Rank = c1.rank.getPower();
 			List<Card> tempCardList = new ArrayList<>();
 			tempCardList.add(c1);
 
 			for (Card c2 : chkCardList) {
-				int c2Rank = c2.rank.power;
+				int c2Rank = c2.rank.getPower();
 
 				if (c1Rank != c2Rank) {
 					if (c2Rank == c1Rank + 1) {

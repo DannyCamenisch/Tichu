@@ -56,8 +56,8 @@ public class CardSet implements Comparable<CardSet> {
         else if(this.type.power > o.type.power) return 1;
         else if(!this.type.equals(o.type)) return 1;
         else {
-            int thisCardPower = this.cards.get(0).rank.power;
-            int otherCardPower = o.cards.get(0).rank.power;
+            int thisCardPower = this.cards.get(0).rank.getPower();
+            int otherCardPower = o.cards.get(0).rank.getPower();
 
             if(thisCardPower < otherCardPower) return -1;
             else if(thisCardPower > otherCardPower) return 1;

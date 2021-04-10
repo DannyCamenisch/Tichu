@@ -10,7 +10,7 @@ public class Card implements Comparable<Card>{
     }
 
     public int getPoints() {
-        return rank.points;
+        return rank.getPoints();
     }
 
     @Override
@@ -20,7 +20,7 @@ public class Card implements Comparable<Card>{
 
     @Override
     public int compareTo(Card card) {
-        return this.rank.power - card.rank.power;
+        return this.rank.getPower() - card.rank.getPower();
     }
 
     @Override

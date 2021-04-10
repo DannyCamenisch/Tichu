@@ -19,8 +19,13 @@ public enum CardRank {
     PHOENIX(15, -25),
     DRAGON(16, 25);
 
-    public final int power;
-    public final int points;
+    private int power;
+    private int points;
+
+    public int getPower() { return power; }
+    public int getPoints() { return points; }
+
+    public void setPower(int power) { this.power = power; }
 
     private CardRank(int power, int points) {
         this.power = power;

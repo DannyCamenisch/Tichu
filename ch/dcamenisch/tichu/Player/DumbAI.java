@@ -7,7 +7,7 @@ import ch.dcamenisch.tichu.Card.Card;
 import ch.dcamenisch.tichu.Card.CardRank;
 import ch.dcamenisch.tichu.Card.CardSuit;
 
-public class PlayerTest implements Player {
+public class DumbAI implements Player {
     private String name;
     private List<Card> cards;
     private List<Card> stack;
@@ -19,7 +19,7 @@ public class PlayerTest implements Player {
      * instatiate a new player object with a given name
      * @param name of the player
      */
-    public PlayerTest(String name) {
+    public DumbAI(String name) {
         this.name = name;
         this.cards = new ArrayList<Card>();
         this.stack = new ArrayList<Card>();
