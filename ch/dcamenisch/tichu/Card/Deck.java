@@ -12,6 +12,9 @@ public class Deck {
         generateCards();
     }
 
+    /**
+     * generates each card of the deck, DUMMY suit gets ignored
+     */
     private void generateCards() {
         deck = new ArrayList<Card>();
 
@@ -26,6 +29,8 @@ public class Deck {
                 deck.add(new Card(s, r));
             }
         }
+
+        assert deck.size() == 56 : "[ERROR] - deck size is wrong"; // deck should now consist of 56 cards
     }
 
     /**
@@ -45,5 +50,4 @@ public class Deck {
             i++;
         }
     }
-
 }
