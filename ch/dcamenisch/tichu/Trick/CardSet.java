@@ -17,6 +17,7 @@ public class CardSet implements Comparable<CardSet> {
         makeCardSet(cards);
     }
 
+    // TODO: in case of a straight with a phoenix at start/end, selecte the straight of higher "power"
     private void makeCardSet(List<Card> cards) throws CardSetException {
         List<CardSet> cardSets = CardSetGenerator.generateCardSet(cards);
 
@@ -44,16 +45,20 @@ public class CardSet implements Comparable<CardSet> {
         String cardSet = "";
 
         for(Card c : cards) {
-            cardSet = cardSet.concat(", ").concat(c.toString());
+            cardSet += cardSet.length() == 0 ? c.toString() : ", " + c.toString();
         }
 
         return cardSet;
     }
 
+    /**
+     * compares two cardsets and returns 1 if this card set is stronger, 0 if they are equal and -1
+     * if this cardset is weaker
+     */
     @Override
     public int compareTo(CardSet o) {
-        if(this.type.power < o.type.power) return -1;
-        else if(this.type.power > o.type.power) return 1;
+        if(this.type.getPower() < o.type.getPower()) return -1;
+        else if(this.type.getPower() > o.type.getPower()) return 1;
         else if(!this.type.equals(o.type)) return 1;
         else {
             int thisCardPower = this.cards.get(0).rank.getPower();

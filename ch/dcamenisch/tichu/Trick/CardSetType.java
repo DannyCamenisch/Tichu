@@ -10,7 +10,9 @@ public enum CardSetType {
     FOUR_CARDS(1),
     STRAIGHT_FLUSH(2);
 
-    public final int power;
+    private int power;
+
+    public int getPower() { return power; }
 
     private CardSetType(int power) {
         this.power = power;

@@ -23,9 +23,7 @@ public class Main {
 
         for(int i = 0; i < cardSets.size(); i++) {
             System.out.println("Card Set: " + i);
-            for(Card c : cardSets.get(i).cards) {
-                System.out.println(c);
-            }
+            System.out.println(cardSets.get(i).toString());
         }
     }
 }
