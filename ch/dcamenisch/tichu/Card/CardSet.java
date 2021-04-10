@@ -11,16 +11,22 @@ public class CardSet implements Comparable<CardSet> {
         this.type = type;
     }
 
-    public CardSet(List<Card> cards) {
+    public CardSet(List<Card> cards) throws CardSetException {
         makeCardSet(cards);
     }
 
-    private void makeCardSet(List<Card> cards) {
+    private void makeCardSet(List<Card> cards) throws CardSetException {
+        List<CardSet> cardSets = CardSetGenerator.generateCardSet(cards);
 
-        // TODO: implement 
+        for (CardSet cs : cardSets) {
+			if (cs.cards.size() == cards.size()) {
+				this.type = cs.type;
+				this.cards = cs.cards;
+				return;
+			}
+		}
 
-        this.type = null;
-        this.cards = null;
+		throw new CardSetException("These cards are not a valid play!");
     }
 
     public int getPoints() {

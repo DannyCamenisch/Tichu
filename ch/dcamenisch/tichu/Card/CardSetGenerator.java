@@ -8,6 +8,9 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+//TODO: own implementation of CardSetGenerator
+// if phoenix exists, generate all possible cardsets with one of each card additionally 
+
 
 public class CardSetGenerator {
 
@@ -23,12 +26,10 @@ public class CardSetGenerator {
 
 		handlePhoenix(cardList, cardSetList);
 
-
 		return cardSetList;
 	}
 
     private static void generate(List<Card> cardList, List<CardSet> cardSetList) {
-
 		Map<CardSuit, List<Card>> cardListMapBySuit = new HashMap<>();
 		Map<CardRank, List<Card>> cardListMapByRank = new HashMap<>();
 
@@ -38,7 +39,6 @@ public class CardSetGenerator {
 			}
 			cardListMapBySuit.get(c.suit).add(c);
 
-			// 숫자별 정리
 			if (!cardListMapByRank.containsKey(c.rank)) {
 				cardListMapByRank.put(c.rank, new ArrayList<Card>());
 			}
@@ -164,8 +164,6 @@ public class CardSetGenerator {
 
 
 	private static void handlePhoenix(List<Card> cardList, List<CardSet> cardSetList) {
-		// TODO 봉황로직은 추후 정리할 필요가 있다. 대충 만들어서 돌긴 하는데 이유를 모른다..
-		// 봉황이 있으면?! 더미카드를 만들어보자!
 		Set<Card> dummyCardList = new HashSet<>();
 		boolean hasPhoenix = false;
 		for (Card c : cardList) {
@@ -262,56 +260,3 @@ public class CardSetGenerator {
 	}
 
 }
-
-
-
-
-
-/*
-package ch.dcamenisch.tichu.Card;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-public class CardSetGenerator {
-    private final static int straight = 5;
-
-    public static List<CardSet> generateCardSet(List<Card> originalCardList) {
-        List<Card> cardList = new ArrayList<Card>(originalCardList);
-        List<CardSet> cardSetList = new ArrayList<CardSet>();
-
-        generate(cardList, cardSetList);
-        
-        return cardSetList;
-    }
-
-    private static void generate(List<Card> cardList, List<CardSet> cardSetList) {
-        Map<CardSuit, List<Card>> cardListMapBySuit = new HashMap<>();
-        Map<CardRank, List<Card>> cardListMapByRank = new HashMap<>();
-        
-        // fill maps with cards
-        for(Card c : cardList) {
-            if(!cardListMapBySuit.containsKey(c.suit)) {
-                cardListMapBySuit.put(c.suit, new ArrayList<Card>());
-            }
-            cardListMapBySuit.get(c.suit).add(c);
-
-            if(!cardListMapByRank.containsKey(c.rank)) {
-                cardListMapByRank.put(c.rank, new ArrayList<Card>());
-            }
-            cardListMapByRank.get(c.rank).add(c);
-        }
-
-        
-        
-
-
-    }
-
-
-
-
-}
-*/
