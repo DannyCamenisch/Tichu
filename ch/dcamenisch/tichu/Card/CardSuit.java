@@ -5,5 +5,6 @@ public enum CardSuit {
     PAGODA,
     STAR,
     JADE,
-    SPECIAL
+    SPECIAL,
+    DUMMY
 }

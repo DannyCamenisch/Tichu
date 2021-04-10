@@ -9,10 +9,10 @@ public class Deck {
     private ArrayList<Card> deck;
 
     public Deck() {
-        makeCards();
+        generateCards();
     }
 
-    private void makeCards() {
+    private void generateCards() {
         deck = new ArrayList<Card>();
 
         for(CardRank r : CardRank.values()) {
@@ -22,7 +22,7 @@ public class Deck {
             }
 
             for(CardSuit s : CardSuit.values()) {
-                if(s == CardSuit.SPECIAL) continue;
+                if(s == CardSuit.SPECIAL || s == CardSuit.DUMMY) continue;
                 deck.add(new Card(s, r));
             }
         }
