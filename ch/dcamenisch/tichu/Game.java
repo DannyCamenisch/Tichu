@@ -9,7 +9,6 @@ public class Game {
     /* Constants */
     private static final int MAX_SCORE = 1000;
 
-
     private PlayerManager players;
     private Deck deck;
     private Trick trick;
@@ -45,7 +44,7 @@ public class Game {
      */
     private void playRound() {
         deck.dealCards(players.getPlayers());
-        players.determineStartingPlayer();
+        players.selectStartingPlayer();
 
 
         players.getCurrentPlayer().printCards();

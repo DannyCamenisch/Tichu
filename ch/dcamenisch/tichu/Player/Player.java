@@ -6,13 +6,14 @@ import java.util.List;
 import ch.dcamenisch.tichu.Card.Card;
 import ch.dcamenisch.tichu.Card.CardRank;
 import ch.dcamenisch.tichu.Card.CardSuit;
+import ch.dcamenisch.tichu.Trick.Trick;
 
 public interface Player {
 
     public void receiveCards(List<Card> list);
     public void receiveCard(Card card);
 
-    public void receiveStack(List<Card> stack);
+    public void receiveTrick(Trick trick);
 
     public void printCards();
     public boolean hasCard(CardRank rank, CardSuit suit);

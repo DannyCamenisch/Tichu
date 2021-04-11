@@ -15,7 +15,7 @@ public class PlayerManager {
         }
     }
 
-    public void determineStartingPlayer() {
+    public void selectStartingPlayer() {
         for(int i = 0; i < players.length; i++){
             if(players[i].hasCard(CardRank.MAHJONG, CardSuit.SPECIAL)) {
                 currentPlayer = i;
