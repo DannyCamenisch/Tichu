@@ -7,8 +7,8 @@ public enum CardSetType {
     TRIPLE(0),
     FULL_HOUSE(0),
     STRAIGHT(0),
-    FOUR_CARDS(1),
-    STRAIGHT_FLUSH(2);
+    FOUR_BOMB(1),
+    STRAIGHT_BOMB(2);
 
     private int power;
 

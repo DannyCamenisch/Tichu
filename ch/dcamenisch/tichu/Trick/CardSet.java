@@ -51,6 +51,22 @@ public class CardSet implements Comparable<CardSet> {
         return cardSet;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if(obj instanceof CardSet) {
+            CardSet cs = (CardSet) obj;
+
+            if (cs.cards.size() != this.cards.size()) return false;
+            for (Card c : cs.cards) {
+                if (!cards.contains(c)) return false;
+            }
+
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     /**
      * compares two cardsets and returns 1 if this card set is stronger, 0 if they are equal and -1
      * if this cardset is weaker
